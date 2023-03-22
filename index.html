@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>valor registores</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body onchange="resistencia()">
+    <hr>
+    <h2> Resistor 1 </h2>
+    <div>
+        <select name="cores" id="res">
+            <option value="0"> preto </option>
+            <option value="10"> marrom </option>
+            <option value="20"> vermelho </option>
+            <option value="30"> laranja </option>
+            <option value="40"> amarelo </option>
+            <option value="50"> verde </option>
+            <option value="60"> azul </option>
+            <option value="70"> violeta </option>
+            <option value="80"> cinza </option>
+            <option value="90"> branco </option>
+        </select>
+    </div>
+    <hr id="amor">
+    <h2> Resistor 2 </h2>
+    <div>
+        <select name="cores2" id="res2">
+            <option value="0"> preto </option>
+            <option value="1"> marrom </option>
+            <option value="2"> vermelho </option>
+            <option value="3"> laranja </option>
+            <option value="4"> amarelo </option>
+            <option value="5"> verde </option>
+            <option value="6"> azul </option>
+            <option value="7"> violeta </option>
+            <option value="8"> cinza </option>
+            <option value="9"> branco </option>
+        </select>
+    </div>
+    <hr>
+    <h2> Multiplicador  </h2>
+    <div>
+        <select name="multi" id="mul">
+            <option value="1"> preto </option>
+            <option value="10"> marrom </option>
+            <option value="100"> vermelho </option>
+            <option value="1000"> laranja </option>
+            <option value="10000"> amarelo </option>
+            <option value="100000"> verde </option>
+            <option value="1000000"> azul </option>
+            <option value="10000000"> violeta </option>
+            <option value="0.1"> dourado </option>
+            <option value="0.01"> prateado </option>
+        </select>
+    </div>
+    <hr>
+    <h2> Tolerancia </h2>
+    <div>
+        <select name="tolerancia" id="tole">
+            <option value="0"> nenhuma </option>
+            <option value="0.05"> dourado </option>
+            <option value="0.10"> prateado </option>
+        </select>
+    </div>
+    <hr>
+    <h2>Resultado</h2>
+    <div>
+        <input type="text" id="total" readonly>
+    </div>
+   
+    <script>
+        function resistencia(){
+            let f1 = document.getElementById("res").value;
+            let f2 = document.getElementById("res2").value;
+            let multi = document.getElementById("mul").value;
+            let tol = document.getElementById("tole").value;
+            let soma = (f1+f2)*multi;
+            let resmax = soma + (soma * tol);
+            let resmim = soma - (soma * tol);
+            document.getElementById("total").value = " Ω = " + resmim + " e " + resmax;
+           
+        }
+    </script>
+</body>
+</html>

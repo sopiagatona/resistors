@@ -1,0 +1,46 @@
+body{
+
+  background-color: #FFF5EE;
+  border: 5px solid #CD5C5C;
+}
+
+header{
+margin-left: 44%;
+color: lightpink;
+
+}
+
+  #res{
+   
+    background-color: #CD5C5C;
+    margin-left: 46%;
+  }
+
+ #res2{
+  background-color: #CD5C5C ;
+  margin-left: 46%;
+   
+ 
+
+ }
+
+  #mul{
+    background-color:#CD5C5C;
+    margin-left: 46%;
+   
+  }
+
+  #tole{
+      background-color: #CD5C5C;
+      margin-left: 46%;
+  }
+
+
+#total{
+  width: 500px;
+  margin-left: 36%;
+}
+ 
+h2{
+  margin-left: 46%;
+}
